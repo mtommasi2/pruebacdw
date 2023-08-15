@@ -1,0 +1,99 @@
+/*footer*/
+
+.piePag{
+    height: fit-content;
+    width: 100%;
+    background-color: $colorFooter;
+    color: #fff;
+    /*abro grid del footer*/
+    display: grid;
+    justify-content: space-evenly ;
+    grid-template-columns: repeat(3 1fr);
+    grid-template-rows: repeat(2 1fr);
+    grid-template-areas: "horarios telefono contacto"
+                         "horarios telefono contacto";
+    @media (min-width: 320px) and (max-width: 767px){
+    grid-template-columns: 1 1fr;
+    grid-template-rows: repeat(3 1fr);
+    grid-template-areas:     "horarios"
+                             "telefono"
+                             "contacto";
+    row-gap: 50px;
+     }
+    .horarios{
+     grid-area: horarios;
+      .info{
+         font-size: 24px;
+         margin-top: 5px;
+         margin-bottom: 12px;
+         font-weight: 600;
+       }
+        .infoContenido{
+          font-size: 17px;
+          margin-bottom: 10px ;
+      }
+    }
+    .telefono{
+        grid-area: telefono;
+        .info{
+            font-size: 24px;
+            margin-top: 5px;
+            margin-bottom: 12px;
+            font-weight: 600;
+          }
+        .iconoTelefono{
+            width: 23px;
+            height: 23px;
+        }
+        .infoContenido{
+            font-size: 17px;
+            margin-bottom: 10px ;
+        }
+    }
+    .contacto{
+        grid-area: contacto;
+        .info{
+            font-size: 24px;
+            margin-top: 5px;
+            margin-bottom: 12px;
+            font-weight: 600;
+          }
+        #seguinos{
+            margin-bottom: 0px;
+        }
+        .redes{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            .iconoIg{
+                width: 60px;
+                height: 35px;
+                position: relative;
+                right: 14px;
+             }
+             .iconoWs{
+                 width: 65px;
+                 height: 55px;
+                 position: relative;
+                 right: 14px;
+              }
+             .iconoYt{
+                 width: 65px;
+                 height: 50px;
+                 position: relative;
+                 right: 14px;
+              }
+        }
+     }
+}
+
+
+/*cierro grid del footer*/
+
+
+@media (min-width: 320px) and (max-width: 767px){
+    .info{
+        font-size: 20px;
+    }
+}
+

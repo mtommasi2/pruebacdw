@@ -1,0 +1,45 @@
+.encabezado{
+    background-color: #fffffff7;
+    overflow: auto;
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+    .logoContainer{
+        margin-left: 3%;
+        display: flex;
+        justify-content: space-between;
+        .relleno{
+            width: 50%;
+            height: 70px;
+        }
+    }
+    .navbar{
+        background-color:  #fffffff7 !important;
+        .container-fluid{
+            .alineacionNav{
+                margin-left: 35px;
+                font-size: 20px;
+            }
+            .nav-link{
+                list-style: none;
+                padding: 25px;
+                margin-right: 10px;
+                border-left: solid #f9f9f978 1px;
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+.logo{
+    padding: 2px;
+    width: 70;
+    height: 70px;
+    /*medias para acomodar el logo a responsive*/
+    @media (min-width: 321px) and (max-width: 900px){
+        width: 97%;
+    }
+    @media (max-width: 320px){
+        width: 97%;
+    }
+}

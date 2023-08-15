@@ -1,0 +1,74 @@
+/*exclusivo para NOSOTROS*/
+
+.imgEquipoContainer{
+    display: flex;
+    justify-content: center;
+    .imagenEquipo{
+        object-fit: cover;
+        width: 68%;
+        height: 550px;
+        margin: 50px;
+        @media (min-width: 321px) and (max-width: 429px){
+                height: 200px;
+                width: 80%;
+        }
+    }
+}
+
+.descripcionContainer{
+    margin: 0 200px 50px 200px;
+    /*grid del texto de presentacion de la empresa*/
+    display: grid;
+    grid-template-columns: repeat(2 1fr);
+    grid-template-rows: repeat(3 1fr);
+    grid-template-areas: "parrafo1 parrafo4"
+                         "parrafo2 parrafo5"
+                         "parrafo3 parrafo6";
+    row-gap: 10px;
+    column-gap: 25px;
+    text-align: justify;
+    margin: 0 200px 75px 200;
+    text-align: justify;
+    /*medias para acomodar el texto en una sola columna para disp. chicos*/
+    @media (min-width: 500px) and (max-width: 900px){
+            margin: 0 100px 50px 100px;
+            display: grid;
+            grid-template-columns: 1 1fr;
+            grid-template-rows: repeat(6 1fr);
+            grid-template-areas: "parrafo1"
+                                 "parrafo2"
+                                 "parrafo3"
+                                 "parrafo4"
+                                 "parrafo5"
+                                 "parrafo6";
+            row-gap: 10px;
+            column-gap: 25px;
+            text-align: justify;
+            font-size: medium;
+}
+    @media (min-width: 300px) and (max-width: 499px){
+            margin: 0 50px 50px 50px;
+            display: grid;
+            grid-template-columns: 1 1fr;
+            grid-template-rows: repeat(6 1fr);
+            grid-template-areas: "parrafo1"
+                                 "parrafo2"
+                                 "parrafo3"
+                                 "parrafo4"
+                                 "parrafo5"
+                                 "parrafo6";
+            row-gap: 10px;
+            column-gap: 25px;
+            text-align: justify;
+            font-size: 15px;
+}
+    .parrafoFinal {
+        font-weight: bold;
+        color: $colorFondo;
+        font-size: large;
+        height: 10px;
+        @media (min-width: 300px) and (max-width: 900px){
+            text-align: left;
+        }
+    }
+}

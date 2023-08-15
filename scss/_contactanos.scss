@@ -1,0 +1,93 @@
+
+/*Exclusivo para CONTACTANOS*/
+
+.tituloContacto{
+    @extend .destacados;
+    /*uso de extend*/
+    text-align: left;
+    margin-left: 10%;
+}
+
+.contactoWrapper{
+    width: 80%;
+    margin: 0 0% 0 15%;
+    display: grid;
+    grid-template-columns: 2 1fr;
+    grid-template-rows: 1 1fr;
+    grid-template-areas: "datosContacto formularioContacto";
+    column-gap: 150px;
+    @media (min-width: 300px) and (max-width: 499px){
+            width: 80%;
+            display: grid;
+            grid-template-columns: 1 1fr;
+            grid-template-rows: 2 1fr;
+            grid-template-areas: "datosContacto"
+                                "formularioContacto";
+        }
+    .datosContacto{
+        .subtitulos{
+            margin-bottom: 20px;
+        }
+        .dato{
+            position: relative;
+            left: 10%;
+            @media (min-width: 300px) and (max-width: 499px){
+                    position: relative;
+                    left: 0%;
+                }
+            }
+            .colorcito{
+                color: $colorFondo;
+                font-weight: bold;
+                font-size: 17px;
+            }
+        }
+    }
+
+input, select{
+    margin: 10px 0 0 0;
+    width: 100%;
+}
+
+input, .dato, select, #submit{
+    font-weight: 600;
+}
+
+.nombre , .numero{ 
+    margin-right: 30px;
+}
+
+#nombre, #apellido, #numero, #servicioSolicitado{
+    margin-bottom: 17px;
+}
+
+.servicioSolicitado{
+    width: 248px;
+}
+
+
+#mensaje{
+    height: 200px;
+    width: 75%;
+    margin-bottom: 12px;
+}
+
+.botonWrap{
+    display: block;
+    .enviar{
+        width: 90px;
+        height: 35px;
+        margin-bottom: 35px;
+        border-radius: 0;
+        border: 0;
+        background-color: $colorFondo;
+        color: #fff;
+        font-weight: bold;
+    }/*boton enviar*/
+}
+
+@media (min-width: 300px) and (max-width: 499px){
+    .nombre, .apellido, .numero, .servicioSolicitado, .mensaje{
+        margin-bottom: 7px;
+    }
+}
